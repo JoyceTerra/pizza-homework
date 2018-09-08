@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ChosenSauce  from '../actions/pizza'
+import { ChosenSauce }  from '../actions/pizza'
 import { sauces } from '../db'
 import '../styles.css'
-
-
 
 
 class PizzaSauce extends Component{
     constructor(){
         super()
-        this.handleChange = this.handleChange.bind(this)
+        // this.handleChange = this.handleChange.bind(this)
 
         this.state = {}
     }
     // console.log(event)
-    handleChange(event){
+    handleChange = (event) =>{
         this.setState({ 
             id: event.target.key, 
-            name: event.target.title, 
+            name: event.target.name, 
             price: event.target.value 
         })
        
@@ -32,7 +30,7 @@ class PizzaSauce extends Component{
                 <div className="container_items">
                     <ul>
                         {sauces.map(sauce => <li key={ sauce.id }>
-                        <input className="radio_button"  name={ 'sauce' } type={ 'radio' } onChange={this.handleChange} />
+                        <input className="radio_button"  name={ 'sauce' } type={ 'radio' } value={sauce.price} id={sauce.name} onChange={this.handleChange} />
                        <div className="label-item"> <label>{ sauce.name }</label> </div>
                        <br/>
                         <div className="label-item-price"><label> &euro; { sauce.price }</label></div>

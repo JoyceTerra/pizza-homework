@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ChosenBase from '../actions/pizza'
+import { ChosenBase } from '../actions/pizza'
 import { bases } from '../db'
 import '../styles.css'
 
 class PizzaBase extends Component{
     constructor(){
         super()
-        this.handleChange 
 
         this.state = {}
     }
@@ -15,11 +14,11 @@ class PizzaBase extends Component{
     handleChange = (event)  => {
         this.setState({ 
             id: event.target.key, 
-            name: event.target.title, 
+            name: event.target.name, 
             price: event.target.value 
         })
         
-        this.props.ChosenBase(event.target.title, event.target.value)
+        this.props.ChosenBase(event.target.id, event.target.value)
     }
 
     render(){
@@ -29,8 +28,8 @@ class PizzaBase extends Component{
                 <div className="container_items">
                     <ul>
                         {bases.map(base => <li key={ base.id }>
-                        <input className="radio_button" name={ 'base' } type={ 'radio' } onChange={this.handleChange} />
-                        
+                        <input className="radio_button" name={ 'base' } type={ 'radio' } value={ base.price } id={ base.name} onChange={this.handleChange} />
+
                        <div className="label-item"> <label>{ base.name }</label> </div>
 
                        <br/>
