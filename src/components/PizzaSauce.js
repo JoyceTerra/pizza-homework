@@ -36,6 +36,8 @@ class PizzaSauce extends Component{
                         <div className="label-item-price"><label> &euro; { sauce.price }</label></div>
                         </li> )}
                     </ul>
+                    <br/>
+                    <br/>
                 </div>
 
             </div>

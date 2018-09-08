@@ -20,20 +20,20 @@ class PizzaToppings extends Component{
     }
         // console.log(event)
 
-    handleEvent = (event) =>{
+    handleChange = (event) =>{
         if(this.state.checked_toppings.lenght >= 3){
-            event.target.check === false
+            event.target.check = false
         }
         if(event.target.checked === true){
             this.setState({
                 checked_toppings: [
-                    this.this.state.checked_toppings,
+                    ...this.state.checked_toppings,
                     event.target.value
                 ],
                 checked: event.target.checked
             })
         }else{
-            const filteredToppings = this.this.state.checked_toppings
+            const filteredToppings = this.state.checked_toppings
             .filter(oneTopping => oneTopping !== event.target.value)
             this.setState({ checked_toppings: filteredToppings, checked: event.target.checked})
         }
@@ -46,22 +46,33 @@ class PizzaToppings extends Component{
     
 
     render(){
-        // console.log(this.state.checked_toppings)
+        console.log(this.props.ChosenToppings(this.state.checked_toppings))
 
         return(
             <div>
                 <form onSubmit={ this.handleSubmit }>
+                
                     <label className="label_titles">You can choose 3 Toppings</label>
-                    <div>
+                    <br/>
+                    <br/>
+                    <div className="toppings">
+                   
                         { toppings.map( topping => {
+                              return (
+                               
                             <label key={ topping }>
                             <input className="label-item" type={ 'checkbox' } value={ topping } onChange={this.handleChange} /> { topping }
                             </label>
+                              )
                         })}
+                        <br/>
+                        <br/>
+                       
 
-                        <button type="submit" primary={true}>Add Toppings</button>
+                        <button type="submit" >Add Toppings</button>
+                        <br/>
+                        <br/>
                     </div>
-
                 </form>
             </div>
         )
