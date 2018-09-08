@@ -14,14 +14,19 @@ class Delivery extends Component{
     this.setState(delivery_check => ({
         delivery_check: !this.state.delivery_check
     }))
-       this.props.ChosenDelivery(this.state. delivery_check)
+       this.props.ChosenDelivery(this.state.delivery_check)
     }
 
     render(){
         return(
             <div>
                 <input type={'checkbox'} onChange={this.handleChange}/>
-                <label className="delivery_label">Do You Want It  SUPER FAST?</label>
+                <label className="delivery_label"><b>Do You Want It  SUPER FAST? </b></label>
+                <br/>
+                <label className="delivery_label">it costs only 10%</label>
+                <br/>
+                <br/>
+
             </div>
         )
     }

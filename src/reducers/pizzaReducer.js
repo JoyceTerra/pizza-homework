@@ -6,7 +6,7 @@ const initialState = {
   sauce: " ",
   price_sauce: " ",
   toppings: " ",
-  delivery: false
+  delivery_check: false
 }
 
 export default function (state = initialState, {type, payload}) {
@@ -31,7 +31,7 @@ export default function (state = initialState, {type, payload}) {
           case CHANGE_DELIVERY:
             return{
               ...state,
-              delivery:payload
+              delivery_check:payload
             }
       default:
         return state

@@ -23,7 +23,7 @@ export const sauces = [
     {
         id: 1,
         name: 'White sauce',
-        price: 0.00
+        price: 1.00
     }, 
     
     {

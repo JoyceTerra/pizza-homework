@@ -1,33 +1,56 @@
-
-
-
 li{
     list-style-type:none;
-    
+}
+
+h3{
+    font-family: 'Anton', sans-serif;    
+    text-align: center
+}
+
+button{
+    background-color: grey; 
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+
+}
+
+.container_form{
+    width: 1800px;
+    height: 400px
 }
 
 .container_items{
-     height: 100px;
-    width: 50%;
+    height: 100px;
+    width: 30%;
     background: aqua;
     margin: auto;
     /* padding: 10px; */
-   
+    /* display: flex; */
+
 }
 
 .label_titles{
     font-family: Helvetica;
-    background-color: blue
+    background-color: pink;
+    text-align: center;
+    line-height: 150%;
 }
 
 
 .radio_button{
-    background: red;
     float: left;
 }
+
 .label-item{
-    font-family: Helvetica;
+    font-family: 'Montserrat', Helvetica,sans-serif;
     margin-left: 20px;
+    width: 250px;
     /* margin: 20px; */
     height: 20px;
     background: yellow;
@@ -36,11 +59,13 @@ li{
 .label-item-price{
     font-family: Helvetica;
     /* margin-left: 15%; */
-   background-color: green;
+   background-color: lightgreen;
    float: right;
+}
 
-
-
+.label-item-topping{
+    font-family: 'Montserrat', Helvetica,sans-serif;
+    display: inline;
 }
 
 

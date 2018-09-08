@@ -9,7 +9,6 @@ import '../styles.css'
 
 class PizzaToppings extends Component{
     constructor(props){
-
         super(props)
         this.state = {
             checked_toppings: [],
@@ -22,7 +21,7 @@ class PizzaToppings extends Component{
 
     handleChange = (event) =>{
         if(this.state.checked_toppings.lenght >= 3){
-            event.target.check = false
+            event.target.checked = false
         }
         if(event.target.checked === true){
             this.setState({
@@ -52,7 +51,7 @@ class PizzaToppings extends Component{
             <div>
                 <form onSubmit={ this.handleSubmit }>
                 
-                    <label className="label_titles">You can choose 3 Toppings</label>
+                    <label className="label_titles"><h3>You can choose 3 toppings</h3></label>
                     <br/>
                     <br/>
                     <div className="toppings">
@@ -60,8 +59,8 @@ class PizzaToppings extends Component{
                         { toppings.map( topping => {
                               return (
                                
-                            <label key={ topping }>
-                            <input className="label-item" type={ 'checkbox' } value={ topping } onChange={this.handleChange} /> { topping }
+                            <label>
+                            <input className="label-item-topping" type={ 'checkbox' } value={ topping } onChange={this.handleChange} /> { topping }
                             </label>
                               )
                         })}
