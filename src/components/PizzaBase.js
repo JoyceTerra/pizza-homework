@@ -30,8 +30,11 @@ class PizzaBase extends Component{
                     <ul>
                         {bases.map(base => <li key={ base.id }>
                         <input className="radio_button" name={ 'base' } type={ 'radio' } onChange={this.handleChange} />
+                        
                        <div className="label-item"> <label>{ base.name }</label> </div>
+
                        <br/>
+
                         <div className="label-item-price"><label> &euro; { base.price }</label></div>
                         </li> )}
                     </ul>

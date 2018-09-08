@@ -4,7 +4,11 @@ li{
 }
 
 .container_items{
-    width: 200px;
+     height: 100px;
+    width: 50%;
+    background: aqua;
+    margin: auto;
+    /* padding: 10px; */
    
 }
 
@@ -13,17 +17,25 @@ li{
     background-color: blue
 }
 
+
+.radio_button{
+    background: red;
+    float: left;
+}
 .label-item{
     font-family: Helvetica;
-    display: inline-block;
-    background-color: yellow;
-    
+    margin-left: 20px;
+    /* margin: 20px; */
+    height: 20px;
+    background: yellow;
 }
 
 .label-item-price{
     font-family: Helvetica;
-    display: inline-block;
-    background-color: green;
+    /* margin-left: 15%; */
+   background-color: green;
+   float: right;
+
 
 
 }
