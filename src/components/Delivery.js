@@ -26,8 +26,8 @@ class Delivery extends Component{
                 <label className="delivery_label">it costs only 10%</label>
                 <br/>
                 <br/>
-
             </div>
+          
         )
     }
 

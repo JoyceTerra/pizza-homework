@@ -25,9 +25,9 @@ class PizzaSauce extends Component{
     }
     render(){
         return(
-            <div>
-                <h3 className="label_titles">What's the best sauce?</h3>
-                <div className="container_items">
+            <div className="container_sauce">
+                <h3>What's the best sauce?</h3>
+                <div>
                     <ul>
                         {sauces.map(sauce => <li key={ sauce.id }>
                         <input className="radio_button"  name={ 'sauce' } type={ 'radio' } value={sauce.price} id={sauce.name} onChange={this.handleChange} />

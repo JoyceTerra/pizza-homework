@@ -72,6 +72,7 @@ class PizzaToppings extends Component{
                         <br/>
                         <br/>
                     </div>
+                    <br/>
                 </form>
             </div>
         )

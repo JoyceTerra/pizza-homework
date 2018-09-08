@@ -24,8 +24,8 @@ class PizzaBase extends Component{
     render(){
         return(
             <div>
-                <h3 className="label_titles">What's the best crust?</h3>
-                <div className="container_items">
+                <h3>What's the best crust?</h3>
+                <div>
                     <ul>
                         {bases.map(base => <li key={ base.id }>
                         <input className="radio_button" name={ 'base' } type={ 'radio' } value={ base.price } id={ base.name} onChange={this.handleChange} />
@@ -37,6 +37,7 @@ class PizzaBase extends Component{
                         <div className="label-item-price"><label> &euro; { base.price }</label></div>
                         </li> )}
                     </ul>
+                    <br/>
                 </div>
 
             </div>
