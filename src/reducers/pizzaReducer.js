@@ -35,6 +35,5 @@ export default function (state = initialState, {type, payload}) {
             }
       default:
         return state
-    }
-   
+    }  
   }

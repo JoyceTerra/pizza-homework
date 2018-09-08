@@ -4,24 +4,13 @@ import { ChosenSauce }  from '../actions/pizza'
 import { sauces } from '../db'
 import '../styles.css'
 
-
 class PizzaSauce extends Component{
     constructor(){
         super()
-        // this.handleChange = this.handleChange.bind(this)
-
         this.state = {}
     }
-    // console.log(event)
     handleChange = (event) =>{
-        this.setState({ 
-            id: event.target.key, 
-            name: event.target.name, 
-            price: event.target.value 
-        })
-       
-        this.props.ChosenSauce(event.target.title, event.target.value)
-
+         this.props.ChosenSauce(event.target.id, event.target.value)
     }
     render(){
         return(
@@ -34,14 +23,12 @@ class PizzaSauce extends Component{
                        <div className="label-item"> <label>{ sauce.name }</label> </div>
                        <br/>
                         <div className="label-item-price"><label> &euro; { sauce.price }</label></div>
-                        </li> )}
+                         </li> )}
                     </ul>
                     <br/>
                     <br/>
                 </div>
-
             </div>
-
         )
     }
 }

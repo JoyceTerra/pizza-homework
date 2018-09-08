@@ -3,7 +3,6 @@ export const CHANGE_SAUCE =  'CHANGE_SAUCE'
 export const CHANGE_TOPPINGS =  'CHANGE_TOPPINGS'
 export const CHANGE_DELIVERY =  'CHANGE_DELIVERY'
 
-
 export function ChosenBase(select_base, price) {
     return {
         type: CHANGE_BASE,
