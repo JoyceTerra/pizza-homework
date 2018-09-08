@@ -9,17 +9,15 @@ class Delivery extends Component{
         console.log(event.target.checked)
     this.props.ChosenDelivery(event.target.checked)
     }
-
     render(){
         return(
-            <div>
+            <div className="delivery">
                 <input type={'checkbox'} onChange={this.handleChange}/>
-                <label className="delivery_label"><b>Do You Want It  SUPER FAST? </b></label>
+                <b>Do you want it  SUPER FAST? </b>
                 <br/>
-                <label className="delivery_label">it costs only 10%</label>
+                <label className="dez">it costs only 10% more</label>
                 <br/>
                 <br/>
-
             </div>
         )
     }

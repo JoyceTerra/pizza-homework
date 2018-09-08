@@ -1,17 +1,21 @@
 body{
+    background-color: #ffb560; 
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
 }
+
+.default {cursor: default;}
+
 li{
     list-style-type:none;
 }
 h1{
     font-size: 50px;
 }
+
 h3{
     font-family: 'Anton', sans-serif;    
-    text-align: center;
 }
 
 button{
@@ -24,62 +28,70 @@ button{
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
+    margin: 35px;
 }
 header{
     background-color:#293133 ;
     height: 150px;
-    padding: 20px;
+    padding: 40px;
     color: white;
     font-family: 'Poppins', sans-serif;
-
 }
 
 .container_form{
-    /* width: 1800px;
-    height: 400px */
     height: 100px;
-    width: 40%;
-    background: aqua;
+    width: 60%;
     margin: auto;
     display: inline-table;
 }
-
-
-
-
-
-.label_titles{
-    font-family: Helvetica;
-    background-color: pink;
-    text-align: center;
-    line-height: 150%;
-}
-
 
 .radio_button{
     float: left;
 }
 
-.label-item{
+.base_items{
     font-family: 'Montserrat', Helvetica,sans-serif;
-    margin-left: 20px;
-    width: 250px;
-    /* margin: 20px; */
-    height: 20px;
-    background: yellow;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    padding:20px;
+    width: 60%;
 }
 
-.label-item-price{
-    font-family: Helvetica;
-    /* margin-left: 15%; */
-   background-color: lightgreen;
-   float: right;
+.toppings{
+    font-family: 'Montserrat', Helvetica,sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    padding:30px;
+    width: 90%;
 }
 
-.label-item-topping{
+.delivery{
     font-family: 'Montserrat', Helvetica,sans-serif;
-    display: inline;
 }
+
+.dez{
+    font-size: 16px;
+}
+
+.price{
+    font-family: 'Montserrat', Helvetica,sans-serif;
+}
+
+.total_price{
+    width: 8%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
 
 
 

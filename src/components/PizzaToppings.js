@@ -36,13 +36,10 @@ class PizzaToppings extends Component{
     }
     render(){
         return(
-            <div>
+            <div className="toppings">
                 <form onSubmit={ this.handleSubmit }>
-                
-                    <label className="label_titles"><h3>You can choose 3 toppings</h3></label>
+                    <h3>You can choose 3 toppings</h3>
                     <br/>
-                    <br/>
-                    <div className="toppings">
                         { toppings.map( topping => {
                             return (
                                 <label>
@@ -51,11 +48,7 @@ class PizzaToppings extends Component{
                               )
                         })}
                         <br/>
-                        <br/>
                         <button type="submit" >Add Toppings</button>
-                        <br/>
-                        <br/>
-                    </div>
                     <br/>
                 </form>
             </div>

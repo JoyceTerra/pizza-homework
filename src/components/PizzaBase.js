@@ -19,19 +19,15 @@ class PizzaBase extends Component{
     }
     render(){
         return(
-            <div>
+                <div className="base_items">
                 <h3>What's the best crust?</h3>
-                <div>
+                <br />
                     <ul>
                         {bases.map(base => <li key={ base.id }>
                         <input className="radio_button" name={ 'base' } type={ 'radio' } value={ base.price } id={ base.name} onChange={this.handleChange} />
-                       <div className="label-item"> <label>{ base.name }</label> </div>
-                       <br/>
-                        <div className="label-item-price"><label> &euro; { base.price }</label></div>
+                       <p><span> { base.name } &nbsp;  &nbsp;  &euro; { base.price }</span> </p>
                         </li> )}
                     </ul>
-                    <br/>
-                </div>
             </div>
         )
     }

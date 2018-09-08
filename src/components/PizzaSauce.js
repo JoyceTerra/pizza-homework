@@ -14,20 +14,15 @@ class PizzaSauce extends Component{
     }
     render(){
         return(
-            <div className="container_sauce">
+            <div className="base_items">
                 <h3>What's the best sauce?</h3>
-                <div>
+                <br />
                     <ul>
                         {sauces.map(sauce => <li key={ sauce.id }>
                         <input className="radio_button"  name={ 'sauce' } type={ 'radio' } value={sauce.price} id={sauce.name} onChange={this.handleChange} />
-                       <div className="label-item"> <label>{ sauce.name }</label> </div>
-                       <br/>
-                        <div className="label-item-price"><label> &euro; { sauce.price }</label></div>
+                        <p><span>{ sauce.name } &nbsp;  &nbsp;  &euro;  { sauce.price }</span> </p>
                          </li> )}
                     </ul>
-                    <br/>
-                    <br/>
-                </div>
             </div>
         )
     }
