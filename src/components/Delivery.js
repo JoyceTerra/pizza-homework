@@ -10,7 +10,7 @@ class Delivery extends Component{
             delivery_check: true
         }
     }
-    handleChange(event) {
+    handleChange = (event) => {
     this.setState(delivery_check => ({
         delivery_check: !this.state.delivery_check
     }))

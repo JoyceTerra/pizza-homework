@@ -20,7 +20,7 @@ class PizzaToppings extends Component{
         // console.log(event)
 
     handleChange = (event) =>{
-        if(this.state.checked_toppings.lenght >= 3){
+        if(this.state.checked_toppings.length >= 3){
             event.target.checked = false
         }
         if(event.target.checked === true){

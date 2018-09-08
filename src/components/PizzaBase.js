@@ -21,6 +21,12 @@ class PizzaBase extends Component{
         this.props.ChosenBase(event.target.id, event.target.value)
     }
 
+//     <tr>
+//     <td>Alfreds Futterkiste</td>
+//     <td>Maria Anders</td>
+//     <td>Germany</td>
+//   </tr>
+
     render(){
         return(
             <div>
