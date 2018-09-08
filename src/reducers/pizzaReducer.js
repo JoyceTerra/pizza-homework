@@ -1,10 +1,11 @@
-import  { CHANGE_BASE, CHANGE_SAUCE }  from '../actions/pizza'
+import  { CHANGE_BASE, CHANGE_SAUCE, CHANGE_TOPPINGS }  from '../actions/pizza'
 
 const initialState = {
   base: " ",
   price_base: " ",
   sauce: " ",
-  price_sauce: " "
+  price_sauce: " ",
+  toppings: " ",
 }
 
 export default function (state = initialState, {type, payload}) {
@@ -21,6 +22,11 @@ export default function (state = initialState, {type, payload}) {
         sauce: payload.select_sauce,
         price_sauce: payload.price
       }
+      case CHANGE_TOPPINGS:
+          return {
+            ...state,
+            toppings: payload,
+          }
       default:
         return state
     }
